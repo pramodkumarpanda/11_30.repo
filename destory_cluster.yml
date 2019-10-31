@@ -9,5 +9,5 @@
      src: destory_cluster.sh
      dest: /root
   - name: Execute the script
-    shell:
+    script:
      script: /root/destory_cluster.sh
