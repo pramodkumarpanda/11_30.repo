@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: slave
+  become: yes
+  
+  tasks:
+  - name:
+     copy:
+    src: /
+    dest: /etc/foo.conf
