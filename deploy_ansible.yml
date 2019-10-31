@@ -4,7 +4,13 @@
   become: yes
   
   tasks:
-  - name:
-     copy:
-    src: /
-    dest: /etc/foo.conf
+  - name: "Copy The Conatiner Files"
+    copy:
+     src: container_create.yml
+     dest: /root/
+     force: yes
+  - name: "Copy The Service files"
+    copy: 
+     src: service_create.yml
+     dest: /root/
+     force: yes
