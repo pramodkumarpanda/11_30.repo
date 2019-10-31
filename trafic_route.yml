@@ -11,6 +11,6 @@
      force: yes
   - name: Enable service httpd, and not touch the state
     service:
-      name: httpd
+      name: nginx
       state: restarted
     
