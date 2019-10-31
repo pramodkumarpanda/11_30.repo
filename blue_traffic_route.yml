@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: slave
+  become: yes
+  
+  tasks:
+  - name: "Copy The Conatiner Files"
+    copy:
+     src: blue.conf
+     dest: /etc/nginx/conf.d
+     force: yes
+  - name: Enable service httpd, and not touch the state
+    service:
+      name: nginx
+      state: restarted
+    
