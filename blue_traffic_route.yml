@@ -9,6 +9,8 @@
      src: blue.conf
      dest: /etc/nginx/conf.d
      force: yes
+  - name: Delete green traffic
+    command: rm -rf /etc/nginx/conf.d/green.conf
   - name: Enable service httpd, and not touch the state
     service:
       name: nginx

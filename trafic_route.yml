@@ -9,6 +9,8 @@
      src: green.conf
      dest: /etc/nginx/conf.d
      force: yes
+  - name: "Delet the Files"
+    command: rm -rf /etc/nginx/conf.d/blue.conf
   - name: Enable service httpd, and not touch the state
     service:
       name: nginx
