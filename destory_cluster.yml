@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: slave
+  become: yes
+  
+  tasks:
+  - name: "Copy The Conatiner Files"
+    copy:
+     src: destory_cluster.sh
+     dest: /root
+  - name: Execute the script
+    shell:
+     script: /root/destory_cluster.sh
